@@ -1,12 +1,13 @@
 ## Example
 
-![Demo](https://github.com/AliRn76/number-selection/demo.gif)
+![Demo](https://github.com/AliRn76/number_selection/blob/master/doc/demo.gif)
 </br></br>
-First Import The NumberSelection
+## How to use
+- Import The number_selection.dart
 ```
 import 'package:number_selection/number_selection.dart';
 ```
-And here is the code of example
+- And here is the code of example
 ```
 return Scaffold(
    backgroundColor: Colors.deepPurple[400],
