@@ -1,6 +1,7 @@
 ## Example
 
-![Demo](https://github.com/AliRn76/number_selection/blob/master/doc/demo.gif)
+![Demo](https://github.com/Milvintsiss/number_selection/blob/master/doc/demo%20vertical.gif)
+![Demo](https://github.com/Milvintsiss/number_selection/blob/master/doc/demo%20horizontal.gif)
 </br></br>
 ## How to use
 - Import The number_selection.dart
