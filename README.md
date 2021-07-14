@@ -1,42 +1,28 @@
 ## Example
 
-![Demo](https://github.com/AliRn76/number_selection/blob/master/doc/demo.gif)
-</br></br>
+![Demo](doc/demo.gif)
+
 ## How to use
-- Import The number_selection.dart
+- Import number_selection.dart
 ```
 import 'package:number_selection/number_selection.dart';
 ```
-- And here is the code of example
+- And here an use example
 ```
-return Scaffold(
-   backgroundColor: Colors.deepPurple[400],
-   body: SafeArea(
-     child: Column(
-       mainAxisAlignment: MainAxisAlignment.spaceAround,
-       children: <Widget>[
-         Center(
-           child: NumberSelection(
-             initialValue: 1,
-             minValue: -10,
-             maxValue: 10,
-             direction: Axis.vertical,
-             withSpring: false,
-             onChanged: (int value) => print("value: $value"),
-           ),
-         ),
-         Center(
-           child: NumberSelection(
-             initialValue: 1,
-             minValue: -1,
-             maxValue: 10,
-             direction: Axis.horizontal,
-             withSpring: false,
-             onChanged: (int value) => print("value: $value"),
-           ),
-         ),
-       ],
-     ),
-   ),
- );
+NumberSelection(
+    theme: NumberSelectionTheme(
+        draggableCircleColor: Colors.blue,
+        iconsColor: Colors.white,
+        numberColor: Colors.white,
+        backgroundColor: Colors.deepPurpleAccent,
+        outOfConstraintsColor: Colors.deepOrange),
+    initialValue: 1,
+    minValue: -10,
+    maxValue: 10,
+    direction: Axis.vertical,
+    withSpring: true,
+    onChanged: (int value) => print("value: $value"),
+    enableOnOutOfConstraintsAnimation: true,
+    onOutOfConstraints: () => print("This value is too high or too low"),
+);
 ```

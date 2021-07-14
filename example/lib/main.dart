@@ -18,12 +18,21 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: NumberSelection(
+                  theme: NumberSelectionTheme(
+                      draggableCircleColor: Colors.blue,
+                      iconsColor: Colors.white,
+                      numberColor: Colors.white,
+                      backgroundColor: Colors.deepPurpleAccent,
+                      outOfConstraintsColor: Colors.deepOrange),
                   initialValue: 1,
                   minValue: -10,
                   maxValue: 10,
                   direction: Axis.vertical,
-                  withSpring: false,
+                  withSpring: true,
                   onChanged: (int value) => print("value: $value"),
+                  enableOnOutOfConstraintsAnimation: true,
+                  onOutOfConstraints: () =>
+                      print("This value is too high or too low"),
                 ),
               ),
               Center(
@@ -32,8 +41,9 @@ class MyApp extends StatelessWidget {
                   minValue: -1,
                   maxValue: 10,
                   direction: Axis.horizontal,
-                  withSpring: false,
+                  withSpring: true,
                   onChanged: (int value) => print("value: $value"),
+                  enableOnOutOfConstraintsAnimation: false,
                 ),
               ),
             ],
@@ -43,5 +53,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

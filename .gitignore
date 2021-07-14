@@ -1,3 +1,14 @@
+example/android
+example/ios
+example/web
+example/macos
+example/windows
+example/test
+example/.metadata
+example/analysis_options.yaml
+example/pubspec.lock
+example/.gitignore
+
 # Miscellaneous
 *.class
 *.log
